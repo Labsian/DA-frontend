@@ -40,11 +40,9 @@ html {
   box-sizing: border-box;
 }
 body {
-  font-family: ;
-  background: ;
-  color: #0000;
+  color: #000;
   line-height: 1.5;
-  font-size: ;
+  padding: 3rem;
 }
 ul {
   list-style-type: none;
@@ -56,8 +54,7 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
-  text-transform: ;
+  /* letter-spacing: var(--spacing); */
   line-height: 1.25;
   margin-bottom: 0.75rem;
   font-family: var(--ff-primary);
@@ -80,7 +77,7 @@ h4 {
   font-size: 0.875rem;
 }
 p {
-  color: #0000;
+  color: #000;
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -108,3 +105,22 @@ p {
 /*  global classes */
 
 /* section */
+.swiper-pagination {
+  /* bottom: -25px !important;  */
+  z-index: 10;
+}
+
+.swiper-pagination-bullet {
+  background-color: #d1d5db;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #E94057 !important;
+  transform: scale(1.2);
+}
+.swiper {
+  overflow: visible; 
+}

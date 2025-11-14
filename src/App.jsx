@@ -1,14 +1,20 @@
-import "./App.css";
-import { StyledBtn } from "./components/StyledBtn";
-import { FloatingInput } from "./components/StyledInput";
-import { StyledLink } from "./components/StyledLink";
 
-function App() {
-  return (
-    <>
-      <FloatingInput/>
-    </>
-  );
-}
+import { Intro } from "./pages/Intro";
+import { createBrowserRouter } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
+
+
+const App = () => {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Intro />,
+      // errorElement: <ErrorPage />,
+      // children: [{ index: true, element: <Intro /> }],
+    },
+  ]);
+
+  return <RouterProvider router={router}></RouterProvider>;
+};
 
 export default App;

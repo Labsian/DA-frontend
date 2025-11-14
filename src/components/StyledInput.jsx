@@ -1,6 +1,6 @@
 import React from "react";
 
-export const StyledInput = ({label, placeholder, id, type, ...props }) => {
+export const StyledInput = ({ label, placeholder, id, type, ...props }) => {
   return (
     <div className="relative">
       <input
