@@ -1,28 +1,29 @@
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Intro } from "./pages/Intro";
-import { createBrowserRouter } from 'react-router-dom';
-import { RouterProvider } from 'react-router-dom';
-import { SignUp } from "./pages/sign-up";
+import PhoneAuth from "./pages/PhoneAuth";
+import { VerificationCodePage } from "./pages/VerificationCodePage";
+import {SignUp} from './layouts/SignUp';
+import { SignUpPage } from './pages/sign-up/index';
 
 
 const App = () => {
   const router = createBrowserRouter([
     {
-      // path: "/intro",
       path: "/",
       element: <Intro />,
-      // errorElement: <ErrorPage />,
-      // children: [{ index: true, element: <Intro /> }],
     },
     {
       path: "/sign-up",
       element: <SignUp />,
-      // errorElement: <ErrorPage />,
-      // children: [{ index: true, element: <Intro /> }],
+      children: [
+        { index: true, element: <SignUpPage /> },
+        { path: "phone-number", element: <PhoneAuth /> },
+        { path: "phone-verification", element: <VerificationCodePage /> },
+      ],
     },
   ]);
 
-  return <RouterProvider router={router}></RouterProvider>;
+  return <RouterProvider router={router} />;
 };
 
 export default App;

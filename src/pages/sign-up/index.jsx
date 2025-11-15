@@ -1,7 +1,7 @@
 import { StyledBtn } from "../../components/StyledBtn";
 import { FacebookIcon } from "../../components/UseIcons";
 
-export const SignUp = () => {
+export const SignUpPage = () => {
   return (
     <main className="flex flex-col items-center gap-6 py-12 ">
       <img src="assets/trademark.svg" alt="" />
@@ -12,7 +12,7 @@ export const SignUp = () => {
         </StyledBtn>
         <StyledBtn secondary={true} styles={"w-[100%]"}>
           Use phone number{" "}
-        </StyledBtn>
+        </StyledBtn>  
       </div>
       <div className="flex w-full justify-center items-center gap-2.5">
         <div className="flex-1 h-px bg-black opacity-40" />
@@ -25,5 +25,5 @@ export const SignUp = () => {
         </StyledBtn>
       </div>
     </main>
-  );
+  );  
 };
