@@ -39,7 +39,10 @@ export const Intro = () => {
       <StyledBtn primary={true} styles={"w-[100%]"}>
         Create an account{" "}
       </StyledBtn>
-      <p  className="cursor-pointer">Already have an account? <span className="text-[#E94057] font-semibold">Sign In</span></p>
+      <p className="cursor-pointer">
+        Already have an account?{" "}
+        <span className="text-[#E94057] font-semibold">Sign In</span>
+      </p>
     </div>
   );
 };
