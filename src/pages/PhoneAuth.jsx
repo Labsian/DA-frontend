@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import { StyledBtn } from "../components/StyledBtn";
 
 export default function PhoneAuth() {
   const [phone, setPhone] = useState();
@@ -15,17 +16,17 @@ export default function PhoneAuth() {
   };
 
   return (
-<main className="flex flex-col items-center gap-15">
-  <div className="flex flex-col gap-3 items-center">
+<main className="flex flex-col items-center gap-15 mt-18">
+  <div className="flex flex-col gap-3 items-start">
     <h1>My mobile</h1>
     <p>Please enter your valid phone number. We will send you a 4-digit code to verify your account. </p>
   </div>
       <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-5 w-full"
+      className="flex flex-col gap-10 w-full"
     >
       <PhoneInput
-        className="border border-[#E8E6EA] p-6 rounded-2xl"
+        className="border border-[#E8E6EA] p-4 rounded-2xl"
         inputClassName="myPhoneInput"
         international
         defaultCountry="US"
@@ -34,9 +35,9 @@ export default function PhoneAuth() {
         onChange={setPhone}
       />
 
-      <button type="submit" style={{ padding: "10px", borderRadius: "8px" }}>
+      <StyledBtn type="submit" primary={true} style={{ padding: "10px", borderRadius: "8px" }}>
        Continue
-      </button>
+      </StyledBtn>
     </form>
 </main>
   );

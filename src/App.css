@@ -1,3 +1,129 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: #E94057;
+
+  
+  --ff-primary: 
+  --ff-secondary: ;
+
+  --transition: all 0.3s linear;
+  --spacing: 0.5rem;
+  --radius: 15px;
+  --light-shadow: 
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+html {
+  font-size: 62.5%;
+}
+*,
+::after,
+::before {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+}
+body {
+  color: #000;
+  line-height: 1.5;
+  padding: 3rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  /* letter-spacing: var(--spacing); */
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3.4rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+
+}
+h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  color: #000;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+/* section */
+.swiper-pagination {
+  /* bottom: -25px !important;  */
+  z-index: 10;
+}
+
+.swiper-pagination-bullet {
+  background-color: #d1d5db;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #E94057 !important;
+  transform: scale(1.2);
+}
+.swiper {
+  overflow: visible; 
+}
 .PhoneInputInput {
 outline: none;
 border-left: 1px solid #E8E6EA;
