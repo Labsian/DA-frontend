@@ -6,8 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export const StyledSlideshow = ({ slides, onSlideChange }) => {
   return (
-    <main className="flex flex-col items-center">
-      <div className="w-full flex justify-center items-center bg-white]">
+    <main className="flex flex-col items-center w-screen">
+      <div className="w-full flex justify-center items-center bg-white">
         <Swiper
           modules={[EffectCoverflow, Pagination]}
           effect="coverflow"

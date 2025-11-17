@@ -1,10 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { SignUp } from "./layouts/SignUp";
 import { Intro } from "./pages/Intro";
-import PhoneAuth from "./pages/PhoneAuth";
-import { VerificationCodePage } from "./pages/VerificationCodePage";
-import {SignUp} from './layouts/SignUp';
-import { SignUpPage } from './pages/sign-up/index';
-
+import { SignUpPage } from "./pages/sign-up/index";
+import PhoneAuth from "./pages/sign-up/PhoneAuth";
+import { VerificationCodePage } from "./pages/sign-up/VerificationCodePage";
+import { Gender } from './pages/sign-up/gender';
+import { Interests } from "./pages/sign-up/interests";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -19,6 +20,8 @@ const App = () => {
         { index: true, element: <SignUpPage /> },
         { path: "phone-number", element: <PhoneAuth /> },
         { path: "phone-verification", element: <VerificationCodePage /> },
+        { path: "gender", element: <Gender /> },
+        { path: "interests", element: <Interests /> },
       ],
     },
   ]);

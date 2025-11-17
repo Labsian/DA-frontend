@@ -1,5 +1,6 @@
 import { StyledBtn } from "../../components/StyledBtn";
-import { FacebookIcon } from "../../components/UseIcons";
+import { AppleIcon, FacebookIcon, GoogleIcon } from "../../components/UseIcons";
+import { StyledLink } from './../../components/StyledLink';
 
 export const SignUpPage = () => {
   return (
@@ -12,18 +13,37 @@ export const SignUpPage = () => {
         </StyledBtn>
         <StyledBtn secondary={true} styles={"w-[100%]"}>
           Use phone number{" "}
-        </StyledBtn>  
+        </StyledBtn>
       </div>
       <div className="flex w-full justify-center items-center gap-2.5">
         <div className="flex-1 h-px bg-black opacity-40" />
         <span>or sign up with</span>
         <div className="flex-1 h-px bg-black opacity-40" />
       </div>
-      <div className="flex">
-        <StyledBtn secondary={true} styles={"w-fit group"}>
-          <FacebookIcon className="group-hover:fill-white" />
+      <div className="flex w-full justify-center items-center gap-4">
+        <StyledBtn
+          secondary={true}
+          styles="w-fit text-[#E94057] hover:text-white"
+        >
+          <FacebookIcon className="transition-colors" />
+        </StyledBtn>
+        <StyledBtn
+          secondary={true}
+          styles="w-fit text-[#E94057] hover:text-white"
+        >
+          <AppleIcon className="transition-colors" />
+        </StyledBtn>
+        <StyledBtn
+          secondary={true}
+          styles="w-fit text-[#E94057] hover:text-white"
+        >
+          <GoogleIcon className="transition-colors" />
         </StyledBtn>
       </div>
+      <div className="flex w-full justify-center items-center gap-4">
+        <StyledLink>Terms of use</StyledLink>
+        <StyledLink>Privacy Policy</StyledLink>
+      </div>
     </main>
-  );  
+  );
 };
