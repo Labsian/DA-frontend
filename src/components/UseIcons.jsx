@@ -89,6 +89,24 @@ export const ArrowIcon = () => {
     </svg>
   );
 };
+export const ArrowLeftIcon = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M15.2071 18.7071C14.8166 19.0976 14.1834 19.0976 13.7929 18.7071L7.79289 12.7071C7.40237 12.3166 7.40237 11.6834 7.79289 11.2929L13.7929 5.29289C14.1834 4.90237 14.8166 4.90237 15.2071 5.29289C15.5976 5.68342 15.5976 6.31658 15.2071 6.70711L9.91421 12L15.2071 17.2929C15.5976 17.6834 15.5976 18.3166 15.2071 18.7071Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
 export const CameraIcon = () => {
   return (
     <svg
@@ -352,6 +370,145 @@ export const GameIcon = () => {
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M12.6667 0.791748C13.1039 0.791748 13.4584 1.14619 13.4584 1.58341V3.84532C13.4584 4.28255 13.1039 4.63699 12.6667 4.63699H10.2917V6.33342H12.6667C15.7273 6.33342 18.2084 8.8145 18.2084 11.8751C18.2084 14.9357 15.7273 17.4167 12.6667 17.4167H6.33335C3.27278 17.4167 0.791687 14.9357 0.791687 11.8751C0.791687 8.8145 3.27278 6.33342 6.33335 6.33342H8.70835V3.84532C8.70835 3.40809 9.06279 3.05365 9.50002 3.05365H11.875V1.58341C11.875 1.14619 12.2295 0.791748 12.6667 0.791748ZM6.33335 7.91675C4.14723 7.91675 2.37502 9.68896 2.37502 11.8751C2.37502 14.0612 4.14723 15.8334 6.33335 15.8334H12.6667C14.8528 15.8334 16.625 14.0612 16.625 11.8751C16.625 9.68896 14.8528 7.91675 12.6667 7.91675H6.33335Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
+export const CardIcon = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="9.49905"
+        y="4.49756"
+        width="13"
+        height="18"
+        rx="2"
+        fill="currentColor"
+        stroke="#F3F3F3"
+      />
+      <rect
+        x="0.391632"
+        y="4.48901"
+        width="13"
+        height="18"
+        rx="2"
+        transform="rotate(-15 0.391632 4.48901)"
+        fill="currentColor"
+        stroke="#F3F3F3"
+      />
+    </svg>
+  );
+};
+export const LikeIcon = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 51 51"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.9375 8.5C9.48267 8.5 4.25 13.7327 4.25 20.1875C4.25 31.875 18.0625 42.5 25.5 44.9716C32.9375 42.5 46.75 31.875 46.75 20.1875C46.75 13.7327 41.5173 8.5 35.0625 8.5C31.1097 8.5 27.6151 10.4623 25.5 13.4659C23.3849 10.4623 19.8903 8.5 15.9375 8.5Z"
+        fill="currentColor"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const MessageIcon = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M22 12C22 17.5229 17.5229 22 12 22C9.01325 22 2 22 2 22C2 22 2 14.5361 2 12C2 6.47715 6.47715 2 12 2C17.5229 2 22 6.47715 22 12Z"
+        fill="currentColor"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7 9H16"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7 13H16"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7 17H12"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PersonIcon = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 10C13.933 10 15.5 8.433 15.5 6.5C15.5 4.56701 13.933 3 12 3C10.067 3 8.5 4.56701 8.5 6.5C8.5 8.433 10.067 10 12 10Z"
+        fill="currentColor"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M3 20.4V21H21V20.4C21 18.1598 21 17.0397 20.5641 16.184C20.1806 15.4314 19.5686 14.8195 18.816 14.436C17.9603 14 16.8402 14 14.6 14H9.4C7.1598 14 6.0397 14 5.18405 14.436C4.43139 14.8195 3.81947 15.4314 3.43598 16.184C3 17.0397 3 18.1598 3 20.4Z"
+        fill="currentColor"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const SettingIcon = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M13.75 2C14.3023 2 14.75 2.44772 14.75 3V7C14.75 7.55228 14.3023 8 13.75 8C13.1977 8 12.75 7.55228 12.75 7V6H2.75C2.19772 6 1.75 5.55228 1.75 5C1.75 4.44772 2.19772 4 2.75 4H12.75V3C12.75 2.44772 13.1977 2 13.75 2ZM16.75 5C16.75 4.44772 17.1977 4 17.75 4H20.75C21.3023 4 21.75 4.44772 21.75 5C21.75 5.55228 21.3023 6 20.75 6H17.75C17.1977 6 16.75 5.55228 16.75 5ZM10.75 9C11.3023 9 11.75 9.44772 11.75 10V11H21.75C22.3023 11 22.75 11.4477 22.75 12C22.75 12.5523 22.3023 13 21.75 13H11.75V14C11.75 14.5523 11.3023 15 10.75 15C10.1977 15 9.75 14.5523 9.75 14V10C9.75 9.44772 10.1977 9 10.75 9ZM1.75 12C1.75 11.4477 2.19772 11 2.75 11H6.75C7.30228 11 7.75 11.4477 7.75 12C7.75 12.5523 7.30228 13 6.75 13H2.75C2.19772 13 1.75 12.5523 1.75 12ZM13.75 16C14.3023 16 14.75 16.4477 14.75 17V21C14.75 21.5523 14.3023 22 13.75 22C13.1977 22 12.75 21.5523 12.75 21V20H2.75C2.19772 20 1.75 19.5523 1.75 19C1.75 18.4477 2.19772 18 2.75 18H12.75V17C12.75 16.4477 13.1977 16 13.75 16ZM16.75 19C16.75 18.4477 17.1977 18 17.75 18H20.75C21.3023 18 21.75 18.4477 21.75 19C21.75 19.5523 21.3023 20 20.75 20H17.75C17.1977 20 16.75 19.5523 16.75 19Z"
         fill="currentColor"
       />
     </svg>

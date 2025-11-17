@@ -8,6 +8,8 @@ import { Gender } from './pages/sign-up/gender';
 import { Interests } from "./pages/sign-up/interests";
 import { Friends } from "./pages/sign-up/Friends";
 import { Notifications } from "./pages/sign-up/notifications";
+import { SwipePage } from "./pages/swipe/Swipe";
+import { Swipe } from "./layouts/Swipe";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -26,6 +28,15 @@ const App = () => {
         { path: "interests", element: <Interests /> },
         { path: "friends", element: <Friends /> },
         { path: "notifications", element: <Notifications /> },
+        { path: "swipe-page", element: <SwipePage /> },
+      ],
+    },
+    {
+      path: "/swipe",
+      element: <Swipe />,
+      children: [
+        { index: true, element: <SwipePage /> },
+
       ],
     },
   ]);
