@@ -406,7 +406,7 @@ export const CardIcon = () => {
     </svg>
   );
 };
-export const LikeIcon = ({size='24'}) => {
+export const LikeIcon = ({ size = "24" }) => {
   return (
     <svg
       width={size}
@@ -613,9 +613,9 @@ export const DislikeIcon = () => {
         d="M1.36612 1.36612C1.85427 0.877961 2.64573 0.877961 3.13388 1.36612L8.5 6.73223L13.8661 1.36612C14.3543 0.877961 15.1457 0.877961 15.6339 1.36612C16.122 1.85427 16.122 2.64573 15.6339 3.13388L10.2678 8.5L15.6339 13.8661C16.122 14.3543 16.122 15.1457 15.6339 15.6339C15.1457 16.122 14.3543 16.122 13.8661 15.6339L8.5 10.2678L3.13388 15.6339C2.64573 16.122 1.85427 16.122 1.36612 15.6339C0.877961 15.1457 0.877961 14.3543 1.36612 13.8661L6.73223 8.5L1.36612 3.13388C0.877961 2.64573 0.877961 1.85427 1.36612 1.36612Z"
         fill="#F27121"
         stroke="#F27121"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -633,8 +633,48 @@ export const StarIcon = () => {
         d="M13.4992 1L9.67853 8.7985L1.00003 10.0569L7.28684 16.2032L5.78403 24.75L13.4992 20.637L21.2159 24.75L19.7242 16.2032L26 10.0569L17.3696 8.7985L13.4992 1Z"
         fill="#8A2387"
         stroke="#8A2387"
-        stroke-width="2"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const SortIcon = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9.5 3V21"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M3.5 8.94971L9.5 2.94971"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M14.5 21.0503V3.05029"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M14.5 21.0503L20.5 15.0503"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

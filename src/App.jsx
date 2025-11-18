@@ -12,6 +12,7 @@ import { SwipePage } from "./pages/swipe/Swipe";
 import { Swipe } from "./layouts/Swipe";
 import { ProfileDetailsPage } from "./pages/sign-up/ProfileDetailsPage";
 import { Match } from "./pages/swipe/match";
+import { Matches } from "./pages/swipe/matches";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -39,6 +40,7 @@ const App = () => {
       element: <Swipe />,
       children: [
         { index: true, element: <SwipePage /> },
+        { path: "matches", element: <Matches /> },
 
       ],
     },
