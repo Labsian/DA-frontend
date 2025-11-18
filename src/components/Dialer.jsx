@@ -1,4 +1,3 @@
-import { DeleteIcon } from "./UseIcons";
 
 const Dialer = ({ code, setCode }) => {
   const buttons = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "delete"];
@@ -29,7 +28,7 @@ const Dialer = ({ code, setCode }) => {
     <div className="buttons-container grid grid-cols-3 gap-10">
       {buttons.map((char, idx) => (
         <button className="text-[24px] px-4" key={idx} onClick={() => handleDial(char)}>
-          {char === "delete" ? <DeleteIcon /> : char}
+          {/* {char === "delete" ? <DeleteIcon /> : char} */}
         </button>
       ))}
     </div>
