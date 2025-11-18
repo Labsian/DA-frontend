@@ -1,17 +1,14 @@
-
 const Dialer = ({ code, setCode }) => {
   const buttons = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "delete"];
 
   const handleDial = (char) => {
     if (char === "delete") {
-      const lastFilledIndex = code.lastIndexOf(
-        code.slice().reverse().find((c) => c !== "")
-      );
-
+      const lastFilledIndex = code.slice().reverse().findIndex((c) => c !== "");
       if (lastFilledIndex === -1) return;
 
+      const indexToClear = code.length - 1 - lastFilledIndex;
       const newCode = [...code];
-      newCode[lastFilledIndex] = "";
+      newCode[indexToClear] = "";
       setCode(newCode);
       return;
     }
@@ -28,7 +25,7 @@ const Dialer = ({ code, setCode }) => {
     <div className="buttons-container grid grid-cols-3 gap-10">
       {buttons.map((char, idx) => (
         <button className="text-[24px] px-4" key={idx} onClick={() => handleDial(char)}>
-          {/* {char === "delete" ? <DeleteIcon /> : char} */}
+          {char === "delete" ? "⌫" : char}
         </button>
       ))}
     </div>

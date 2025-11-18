@@ -10,6 +10,7 @@ import { Friends } from "./pages/sign-up/Friends";
 import { Notifications } from "./pages/sign-up/notifications";
 import { SwipePage } from "./pages/swipe/Swipe";
 import { Swipe } from "./layouts/Swipe";
+
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -39,7 +40,6 @@ const App = () => {
       ],
     },
   ]);
-
   return <RouterProvider router={router} />;
 };
 
