@@ -11,7 +11,8 @@ export const MyDrawer = ({children, open, onClose }) => {
       overflow: "hidden", // important
     },
   }}>
-                      {children}
+                    <div className="p-5 rounded-2xl">{children}</div>
+                      
                     </Drawer>
     )
       };

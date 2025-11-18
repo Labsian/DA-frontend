@@ -7,6 +7,9 @@ import toast from "react-hot-toast";
 import { useState } from "react";
 import Drawer from "@mui/material/Drawer";
 import { MyDrawer } from "../../components/Drawer";
+import { MyDatePicker } from "../../components/DatePicker";
+
+
 
 export function ProfileDetailsPage() {
   const [open, setOpen] = useState(false);
@@ -74,7 +77,11 @@ export function ProfileDetailsPage() {
 
 
               <MyDrawer open={open} onClose={toggleDrawer}>
-                <div className="p-5 rounded-2xl">Your calendar goes here...</div>
+                <MyDatePicker setOpen={setOpen} onSelect={(date) => {
+  console.log("Picked date:", date.format("YYYY-MM-DD")); 
+  formik.setFieldValue("bDay", date.format("YYYY-MM-DD")); 
+}} />
+
               </MyDrawer>
 
               <StyledBtn type={"submit"} primary={true} styles={"mt-10"} className="cursor-pointer">

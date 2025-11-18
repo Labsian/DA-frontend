@@ -33,7 +33,7 @@ export function VerificationCodePage() {
           onComplete={() => {
             setLoading(true);
             setTimeout(() => setLoading(false), 10000);
-            navigate("/profile-details")
+            navigate("/sign-up/profile-details")
           }}
         />
 
