@@ -17,8 +17,12 @@ import {
   VoiceIcon,
   YogaIcon,
 } from "../../components/UseIcons";
+import { useNavigate } from "react-router-dom";
+
+
 
 export const Interests = () => {
+  const navigate= useNavigate()
   const [chosenInterests, setChosenInterests] = useState([]);
   const interests = [
     { name: "Photography", icon: <CameraIcon /> },
@@ -40,7 +44,7 @@ export const Interests = () => {
     console.log(chosenInterests);
   });
   return (
-    <div className="VerificationApp flex flex-col gap-10 items-center">
+    <div className=" flex flex-col gap-10 items-center">
       <div className="flex justify-between w-full items-center">
         arrowleft
         <StyledLink>Skip</StyledLink>
@@ -75,7 +79,7 @@ export const Interests = () => {
         ))}
       </div>
 
-      <StyledBtn primary={true} styles={"w-full"}>
+      <StyledBtn onClick={()=>navigate("/sign-up/friends")} primary={true} styles={"w-full"}>
         Continue
       </StyledBtn>
     </div>

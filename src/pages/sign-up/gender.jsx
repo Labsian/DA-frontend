@@ -2,14 +2,16 @@ import React, { useEffect } from "react";
 import { StyledBtn } from "../../components/StyledBtn";
 import { CheckedIcon } from "../../components/UseIcons";
 import { StyledLink } from "../../components/StyledLink";
+import { useNavigate } from "react-router-dom";
 
 export const Gender = () => {
   const [chosenGender, setChosenGender] = React.useState(null);
+    const navigate= useNavigate()
   useEffect(() => {
     console.log(chosenGender);
   }, [chosenGender]);
   return (
-    <div className="VerificationApp flex flex-col gap-10 items-center">
+    <div className=" flex flex-col gap-10 items-center">
         <div className="flex justify-between w-full items-center">
             arrowleft
             <StyledLink>Skip</StyledLink>
@@ -48,7 +50,7 @@ export const Gender = () => {
         </StyledBtn>
       </div>
 
-      <StyledBtn primary={true} styles={"w-full"}>Continue</StyledBtn>
+      <StyledBtn onClick={()=>navigate("/sign-up/interests")} primary={true} styles={"w-full"}>Continue</StyledBtn>
     </div>
   );
 };

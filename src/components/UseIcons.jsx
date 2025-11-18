@@ -406,13 +406,13 @@ export const CardIcon = () => {
     </svg>
   );
 };
-export const LikeIcon = () => {
+export const LikeIcon = ({size='24'}) => {
   return (
     <svg
-      width="24"
-      height="24"
+      width={size}
+      height={size}
       viewBox="0 0 51 51"
-      fill="none"
+      fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -516,18 +516,126 @@ export const SettingIcon = () => {
 };
 export const CalendarIcon = () => {
   return (
-<svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.09265 8.4043H18.9166" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14.442 12.3097H14.4513" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10.0046 12.3097H10.0139" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5.55787 12.3097H5.56713" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14.442 16.1962H14.4513" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10.0046 16.1962H10.0139" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5.55787 16.1962H5.56713" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14.0437 1V4.29078" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5.96545 1V4.29078" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M14.2383 2.57922H5.77096C2.83427 2.57922 1 4.21516 1 7.22225V16.2719C1 19.3263 2.83427 21 5.77096 21H14.229C17.175 21 19 19.3546 19 16.3475V7.22225C19.0092 4.21516 17.1842 2.57922 14.2383 2.57922Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+    <svg
+      width="20"
+      height="22"
+      viewBox="0 0 20 22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1.09265 8.4043H18.9166"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M14.442 12.3097H14.4513"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M10.0046 12.3097H10.0139"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M5.55787 12.3097H5.56713"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M14.442 16.1962H14.4513"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M10.0046 16.1962H10.0139"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M5.55787 16.1962H5.56713"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M14.0437 1V4.29078"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M5.96545 1V4.29078"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M14.2383 2.57922H5.77096C2.83427 2.57922 1 4.21516 1 7.22225V16.2719C1 19.3263 2.83427 21 5.77096 21H14.229C17.175 21 19 19.3546 19 16.3475V7.22225C19.0092 4.21516 17.1842 2.57922 14.2383 2.57922Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const DislikeIcon = () => {
+  return (
+    <svg
+      width="17"
+      height="17"
+      viewBox="0 0 17 17"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M1.36612 1.36612C1.85427 0.877961 2.64573 0.877961 3.13388 1.36612L8.5 6.73223L13.8661 1.36612C14.3543 0.877961 15.1457 0.877961 15.6339 1.36612C16.122 1.85427 16.122 2.64573 15.6339 3.13388L10.2678 8.5L15.6339 13.8661C16.122 14.3543 16.122 15.1457 15.6339 15.6339C15.1457 16.122 14.3543 16.122 13.8661 15.6339L8.5 10.2678L3.13388 15.6339C2.64573 16.122 1.85427 16.122 1.36612 15.6339C0.877961 15.1457 0.877961 14.3543 1.36612 13.8661L6.73223 8.5L1.36612 3.13388C0.877961 2.64573 0.877961 1.85427 1.36612 1.36612Z"
+        fill="#F27121"
+        stroke="#F27121"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+export const StarIcon = () => {
+  return (
+    <svg
+      width="27"
+      height="26"
+      viewBox="0 0 27 26"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M13.4992 1L9.67853 8.7985L1.00003 10.0569L7.28684 16.2032L5.78403 24.75L13.4992 20.637L21.2159 24.75L19.7242 16.2032L26 10.0569L17.3696 8.7985L13.4992 1Z"
+        fill="#8A2387"
+        stroke="#8A2387"
+        stroke-width="2"
+        stroke-linejoin="round"
+      />
+    </svg>
   );
 };

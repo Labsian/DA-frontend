@@ -6,7 +6,7 @@ import { StyledLink } from './../../components/StyledLink';
 export const SignUpPage = () => {
     const navigate= useNavigate()
   return (
-    <main className="flex flex-col items-center gap-6 py-12 ">
+    <main className="flex flex-col items-center gap-6 py-12 h-screen overflow-hidden">
       <img src="assets/trademark.svg" alt="" />
       <div className="w-full flex flex-col items-center gap-6 py-10 ">
         <h3>Sign up to continue</h3>

@@ -3,9 +3,9 @@ import { BottomNav } from "./BottomNav";
 
 export const Swipe = () => {
   return (
-    <div>
+    <div className="h-screen flex flex-col">
 
-      <Outlet />
+      <div className="flex-1"><Outlet /></div>
       <BottomNav/>
     </div>
   );

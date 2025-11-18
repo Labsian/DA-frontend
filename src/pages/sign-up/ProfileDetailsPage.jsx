@@ -1,18 +1,16 @@
-import { CalendarIcon, CameraIcon } from "../../components/UseIcons";
-import { StyledLink } from "../../components/StyledLink";
-import { StyledInput } from "../../components/StyledInput";
-import { StyledBtn } from "../../components/StyledBtn";
 import { useFormik } from "formik";
-import toast from "react-hot-toast";
 import { useState } from "react";
-import Drawer from "@mui/material/Drawer";
-import { MyDrawer } from "../../components/Drawer";
+import { useNavigate } from "react-router-dom";
 import { MyDatePicker } from "../../components/DatePicker";
-
-
+import { MyDrawer } from "../../components/Drawer";
+import { StyledBtn } from "../../components/StyledBtn";
+import { StyledInput } from "../../components/StyledInput";
+import { StyledLink } from "../../components/StyledLink";
+import { CalendarIcon, CameraIcon } from "../../components/UseIcons";
 
 export function ProfileDetailsPage() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleDrawer = () => {
     setOpen((prev) => !prev);
@@ -25,7 +23,7 @@ export function ProfileDetailsPage() {
       bDay: null,
       submit: null,
     },
-    onSubmit: async (values, helpers) => {},
+    // onSubmit: async (values, helpers) => {},
   });
 
   return (
@@ -67,7 +65,7 @@ export function ProfileDetailsPage() {
               />
 
               <StyledBtn
-              type="button"
+                type="button"
                 onClick={toggleDrawer}
                 bgPink={true}
                 styles={"bg-[#E9405780] flex items-center gap-3"}
@@ -75,16 +73,23 @@ export function ProfileDetailsPage() {
                 <CalendarIcon /> Choose birthday date
               </StyledBtn>
 
-
               <MyDrawer open={open} onClose={toggleDrawer}>
-                <MyDatePicker setOpen={setOpen} onSelect={(date) => {
-  console.log("Picked date:", date.format("YYYY-MM-DD")); 
-  formik.setFieldValue("bDay", date.format("YYYY-MM-DD")); 
-}} />
-
+                <MyDatePicker
+                  setOpen={setOpen}
+                  onSelect={(date) => {
+                    console.log("Picked date:", date.format("YYYY-MM-DD"));
+                    formik.setFieldValue("bDay", date.format("YYYY-MM-DD"));
+                  }}
+                />
               </MyDrawer>
 
-              <StyledBtn type={"submit"} primary={true} styles={"mt-10"} className="cursor-pointer">
+              <StyledBtn
+                onClick={() => navigate("/sign-up/gender")}
+                type={"submit"}
+                primary={true}
+                styles={"mt-10"}
+                className="cursor-pointer"
+              >
                 Confirm
               </StyledBtn>
             </form>

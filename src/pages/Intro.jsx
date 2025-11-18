@@ -1,11 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { StyledBtn } from "../components/StyledBtn";
 import { StyledSlideshow } from "../components/SwiperStyled";
-import { useNavigate } from "react-router-dom";
 
 export const Intro = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const navigate= useNavigate()
+  const navigate = useNavigate();
   const slides = [
     {
       path: "assets/girl1.svg",
@@ -25,7 +25,7 @@ export const Intro = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-6  ">
+    <div className="flex flex-col items-center gap-6 h-screen overflow-hidden md:h-full">
       <StyledSlideshow
         slides={slides}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
@@ -38,9 +38,13 @@ export const Intro = () => {
           {slides[activeIndex].text}
         </p>
       </div>
-     <StyledBtn primary={true} styles={"w-[100%]"}  onClick={() => {
-    navigate("/sign-up");
-  }}>
+      <StyledBtn
+        primary={true}
+        styles={"w-[100%]"}
+        onClick={() => {
+          navigate("/sign-up");
+        }}
+      >
         Create an account{" "}
       </StyledBtn>
       <p className="cursor-pointer">
