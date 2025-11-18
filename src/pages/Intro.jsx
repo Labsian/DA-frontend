@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { StyledBtn } from "../components/StyledBtn";
 import { StyledSlideshow } from "../components/SwiperStyled";
+import { useNavigate } from "react-router-dom";
 
 export const Intro = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const navigate= useNavigate()
   const slides = [
     {
       path: "assets/girl1.svg",
@@ -36,7 +38,9 @@ export const Intro = () => {
           {slides[activeIndex].text}
         </p>
       </div>
-      <StyledBtn primary={true} styles={"w-[100%]"}>
+     <StyledBtn primary={true} styles={"w-[100%]"}  onClick={() => {
+    navigate("/sign-up");
+  }}>
         Create an account{" "}
       </StyledBtn>
       <p className="cursor-pointer">

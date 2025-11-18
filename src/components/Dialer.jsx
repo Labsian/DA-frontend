@@ -28,7 +28,7 @@ const Dialer = ({ code, setCode }) => {
   return (
     <div className="buttons-container grid grid-cols-3 gap-10">
       {buttons.map((char, idx) => (
-        <button key={idx} onClick={() => handleDial(char)}>
+        <button className="text-[24px] px-4" key={idx} onClick={() => handleDial(char)}>
           {char === "delete" ? <DeleteIcon /> : char}
         </button>
       ))}

@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { StyledBtn } from "../../components/StyledBtn";
 import { FacebookIcon } from "../../components/UseIcons";
 
 export const SignUpPage = () => {
+    const navigate= useNavigate()
   return (
     <main className="flex flex-col items-center gap-6 py-12 ">
       <img src="assets/trademark.svg" alt="" />
@@ -10,7 +12,7 @@ export const SignUpPage = () => {
         <StyledBtn primary={true} styles={"w-[100%]"}>
           Continue with email
         </StyledBtn>
-        <StyledBtn secondary={true} styles={"w-[100%]"}>
+        <StyledBtn secondary={true} styles={"w-[100%]"} onClick={()=>navigate("phone-number")}>
           Use phone number{" "}
         </StyledBtn>  
       </div>

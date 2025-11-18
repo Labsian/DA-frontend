@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import { StyledBtn } from "../components/StyledBtn";
+import { StyledBtn } from "../../components/StyledBtn";
+import { useNavigate } from "react-router-dom";
 
 export default function PhoneAuth() {
   const [phone, setPhone] = useState();
+      const navigate= useNavigate()
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,6 +16,7 @@ export default function PhoneAuth() {
       return;
     }
     console.log("Phone:", phone); // => +1234567890
+    navigate("/sign-up/phone-verification");
   };
 
   return (

@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 export const SignUp = () => {
   return (
-    <div className='flex flex-col flex-1'>
+    <div className='flex flex-col h-screen ' >
         <Outlet/>
     </div>
   )

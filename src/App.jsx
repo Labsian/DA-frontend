@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Intro } from "./pages/Intro";
-import PhoneAuth from "./pages/PhoneAuth";
-import { VerificationCodePage } from "./pages/VerificationCodePage";
 import {SignUp} from './layouts/SignUp';
 import { SignUpPage } from './pages/sign-up/index';
+import PhoneAuth from "./pages/sign-up/PhoneAuth";
+import { VerificationCodePage } from "./pages/sign-up/VerificationCodePage";
 
 
 const App = () => {

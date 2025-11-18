@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 export const DeleteIcon = () => {
@@ -26,7 +25,6 @@ export const CameraIcon = () => {
 
   )
 }
-=======
 export const FacebookIcon = ({ className = "" }) => {
   return (
     <svg
@@ -45,4 +43,3 @@ export const FacebookIcon = ({ className = "" }) => {
     </svg>
   );
 };
->>>>>>> 36938361aed757078609a3a6bf6cafed3c37ecd5
