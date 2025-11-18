@@ -10,6 +10,7 @@ import { Friends } from "./pages/sign-up/Friends";
 import { Notifications } from "./pages/sign-up/notifications";
 import { SwipePage } from "./pages/swipe/Swipe";
 import { Swipe } from "./layouts/Swipe";
+import { ProfileDetailsPage } from "./pages/sign-up/ProfileDetailsPage";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -29,6 +30,7 @@ const App = () => {
         { path: "friends", element: <Friends /> },
         { path: "notifications", element: <Notifications /> },
         { path: "swipe-page", element: <SwipePage /> },
+        { path: "profile-details", element: <ProfileDetailsPage /> },
       ],
     },
     {

@@ -55,7 +55,6 @@ const VerificationCodeInput = ({ length, loading, onComplete }) => {
           />
         ))}
       </div>
-      <Dialer code={code} setCode={setCode} />
     </div>
   );
 };

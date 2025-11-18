@@ -1,9 +1,13 @@
 import React from "react";
 
-export const StyledInput = ({ label, placeholder, id, type, ...props }) => {
+export const StyledInput = ({ label, placeholder, id, type="text", name, value, formik, ...props }) => {
   return (
     <div className="relative">
       <input
+       name={name}
+       
+      onChange={formik.handleChange}
+
         type={type}
         id={id}
         className="peer h-10 p-2 w-full border border-[#E8E6EA] rounded-2xl text-gray-900 placeholder-transparent focus:outline-none focus:border-[#E94057]"
@@ -12,9 +16,9 @@ export const StyledInput = ({ label, placeholder, id, type, ...props }) => {
       />
       <label
         htmlFor={id}
-        className="absolute left-2 -top-4 text-gray-600 text-sm transition-all 
+        className="absolute left-2 top-3.5 text-gray-400 text-md transition-all 
                    peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
-                   peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-[#E94057] peer-focus:text-sm"
+                   peer-placeholder-shown:top-2 peer-focus:-top-1.5 peer-focus:bg-white peer-focus:text-[#E94057] peer-focus:text-sm"
       >
         {label}
       </label>

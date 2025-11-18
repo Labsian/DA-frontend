@@ -4,11 +4,14 @@ import { ArrowLeftIcon } from "../../components/UseIcons";
 import CountdownTimer from "../../components/CountDown";
 import VerificationCodeInput from "../../components/VerificationCodeInput";
 import Dialer from "../../components/Dialer";
+import { StyledLink } from "../../components/StyledLink";
+import { useNavigate } from "react-router-dom";
 
 export function VerificationCodePage() {
   const [loading, setLoading] = useState(false);
   const [codeSent, setCodeSent]= useState(true)
   const [code, setCode] = useState(["", "", "", ""]);
+  const navigate = useNavigate()
 
   useEffect(()=>{ setCodeSent(true) },[])
 
@@ -30,15 +33,16 @@ export function VerificationCodePage() {
           onComplete={() => {
             setLoading(true);
             setTimeout(() => setLoading(false), 10000);
+            navigate("/profile-details")
           }}
         />
 
         <Dialer code={code} setCode={setCode} />
       </div>
 
-      <StyledBtn disabled={codeSent} onClick={() => setCodeSent(true)}>
+      <StyledLink disabled={codeSent} onClick={() => setCodeSent(true)}>
         Send again
-      </StyledBtn>
+      </StyledLink>
     </div>
   );
 }
