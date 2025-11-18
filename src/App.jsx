@@ -11,6 +11,7 @@ import { Notifications } from "./pages/sign-up/notifications";
 import { SwipePage } from "./pages/swipe/Swipe";
 import { Swipe } from "./layouts/Swipe";
 import { ProfileDetailsPage } from "./pages/sign-up/ProfileDetailsPage";
+import { Match } from "./pages/swipe/match";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -40,6 +41,10 @@ const App = () => {
         { index: true, element: <SwipePage /> },
 
       ],
+    },
+    {
+      path: "/match",
+      element: <Match />,
     },
   ]);
   return <RouterProvider router={router} />;

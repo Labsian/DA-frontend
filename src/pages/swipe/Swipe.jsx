@@ -62,7 +62,7 @@ export function SwipePage() {
         <div className="relative flex justify-center items-center flex-1 max-h-[70vh]">
           <img
             src="assets/4.svg"
-            className="-z-30 -top-2.5 w-[70%] md:w-[20%] rounded-2xl rotate-6"
+            className="-z-30 -top-2.5 h-full w-[70%] md:w-[20%] rounded-2xl rotate-6"
             alt=""
           />
           <motion.button
