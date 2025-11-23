@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { StyledBtn } from "../../components/StyledBtn";
-import { CheckedIcon } from "../../components/UseIcons";
+import { ArrowLeftIcon, CheckedIcon } from "../../components/UseIcons";
 import { StyledLink } from "../../components/StyledLink";
 import { useNavigate } from "react-router-dom";
 
@@ -13,7 +13,9 @@ export const Gender = () => {
   return (
     <div className=" flex flex-col gap-10 items-center">
         <div className="flex justify-between w-full items-center">
-            arrowleft
+                      <StyledBtn secondary={true}>
+            <ArrowLeftIcon />
+          </StyledBtn>
             <StyledLink>Skip</StyledLink>
         </div>
       <h1 className="self-start">I am a</h1>

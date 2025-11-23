@@ -5,7 +5,7 @@ export const BottomNavBtn = ({ icon, path }) => {
   const location = useLocation();
   const pathname = location.pathname;
 
-  const isActive = pathname.includes(path);
+  const isActive = pathname===path;
 
   return (
     <button

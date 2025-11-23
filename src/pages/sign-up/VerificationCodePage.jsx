@@ -17,6 +17,12 @@ export function VerificationCodePage() {
     setCodeSent(true);
   }, []);
 
+  const onComplete = ()  => {
+              setLoading(true);
+              setTimeout(() => setLoading(false), 10000);
+              navigate("/sign-up/profile-details");
+            }
+
   return (
     <main className="h-screen overflow-hidden">
       <div className="VerificationApp flex flex-col items-center ">
@@ -35,14 +41,10 @@ export function VerificationCodePage() {
             loading={loading}
             code={code}
             setCode={setCode}
-            onComplete={() => {
-              setLoading(true);
-              setTimeout(() => setLoading(false), 10000);
-              navigate("/sign-up/profile-details");
-            }}
+            onComplete={onComplete}
           />
 
-          <Dialer code={code} setCode={setCode} />
+          <Dialer code={code} setCode={setCode} onComplete={onComplete} />
         </div>
 
         <StyledLink disabled={codeSent} onClick={() => setCodeSent(true)}>

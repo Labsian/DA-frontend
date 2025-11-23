@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
-import { Scrollbar } from "swiper/modules";
 import { MatchCard } from "../../components/MatchCard";
+import { Scrollbar } from "../../components/scrollbar";
 import { SortIcon } from "../../components/UseIcons";
 import { StyledBtn } from "./../../components/StyledBtn";
 
@@ -20,7 +20,7 @@ export function Matches() {
 
   return (
     <main className="flex flex-col justify-between h-full max-w-screen overflow-hidden pb-2.5">
-      <div className="flex flex-col h-[420px] gap-6">
+      <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
           <div className=" flex justify-between items-center">
             <h2>Discover</h2>
@@ -36,9 +36,9 @@ export function Matches() {
           <div className="flex-1 h-px bg-black opacity-40" />
         </div>
 
-
+        <Scrollbar sx={{ height: "485px" }}>
           <Grid
-            className={"w-full"}
+            className={"w-full "}
             container
             spacing={2}
             justifyItems={"center"}
@@ -57,7 +57,7 @@ export function Matches() {
               </Grid>
             ))}
           </Grid>
-
+        </Scrollbar>
       </div>
     </main>
   );

@@ -32,13 +32,13 @@ export function SwipePage() {
     if (direction === "right") {
       controlsRight.start({
         scale: [0.8, 1.3, 1],
-        x: [0, -100, 0],
+        x: [0, -150, 0],
         transition: { duration: 0.8, ease: "easeInOut" },
       });
     } else {
       controlsLeft.start({
         scale: [0.8, 1.3, 1],
-        x: [0, 100, 0],
+        x: [0, 150, 0],
         transition: { duration: 1, ease: "easeInOut" },
       });
     }
@@ -67,14 +67,14 @@ export function SwipePage() {
           />
           <motion.button
             animate={controlsLeft}
-            className="absolute z-50 bg-white -left-13 rounded-full shadow-[0px_30px_50px_rgba(0,0,0,0.3)] p-4"
+            className="absolute z-50 bg-white -left-20 rounded-full shadow-[0px_30px_50px_rgba(0,0,0,0.3)] p-4"
           >
             <DislikeIcon />
           </motion.button>
 
           <motion.button
             animate={controlsRight}
-            className="text-[#E94057] absolute z-50 bg-white -right-13 rounded-full shadow-[0px_30px_50px_rgba(0,0,0,0.3)] p-4"
+            className="text-[#E94057] absolute z-50 bg-white -right-20 rounded-full shadow-[0px_30px_50px_rgba(0,0,0,0.3)] p-4"
           >
             <LikeIcon size="30" />
           </motion.button>

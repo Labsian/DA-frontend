@@ -1,7 +1,8 @@
-const Dialer = ({ code, setCode }) => {
+const Dialer = ({ code, setCode,onComplete }) => {
   const buttons = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "", "0", "delete"];
 
   const handleDial = (char) => {
+    console.log(char)
     if (char === "delete") {
       const lastFilledIndex = code.slice().reverse().findIndex((c) => c !== "");
       if (lastFilledIndex === -1) return;
@@ -19,10 +20,14 @@ const Dialer = ({ code, setCode }) => {
     const newCode = [...code];
     newCode[firstEmptyIndex] = char;
     setCode(newCode);
+
+        if (newCode.every((num) => num !== "")) {
+      onComplete(newCode.join(""));
+    }
   };
 
   return (
-    <div className="buttons-container grid grid-cols-3 gap-10">
+    <div className="buttons-container grid grid-cols-3 gap-10 mt-7">
       {buttons.map((char, idx) => (
         <button className="text-[24px] px-4" key={idx} onClick={() => handleDial(char)}>
           {char === "delete" ? "⌫" : char}

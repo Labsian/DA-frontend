@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { StyledBtn } from "../../components/StyledBtn";
 import { StyledLink } from "../../components/StyledLink";
 import {
+  ArrowLeftIcon,
   ArtIcon,
   CameraIcon,
   CookingIcon,
@@ -17,12 +19,9 @@ import {
   VoiceIcon,
   YogaIcon,
 } from "../../components/UseIcons";
-import { useNavigate } from "react-router-dom";
-
-
 
 export const Interests = () => {
-  const navigate= useNavigate()
+  const navigate = useNavigate();
   const [chosenInterests, setChosenInterests] = useState([]);
   const interests = [
     { name: "Photography", icon: <CameraIcon /> },
@@ -46,7 +45,9 @@ export const Interests = () => {
   return (
     <div className=" flex flex-col gap-10 items-center">
       <div className="flex justify-between w-full items-center">
-        arrowleft
+        <StyledBtn secondary={true}>
+          <ArrowLeftIcon />
+        </StyledBtn>
         <StyledLink>Skip</StyledLink>
       </div>
       <div>
@@ -79,7 +80,11 @@ export const Interests = () => {
         ))}
       </div>
 
-      <StyledBtn onClick={()=>navigate("/sign-up/friends")} primary={true} styles={"w-full"}>
+      <StyledBtn
+        onClick={() => navigate("/sign-up/friends")}
+        primary={true}
+        styles={"w-full"}
+      >
         Continue
       </StyledBtn>
     </div>

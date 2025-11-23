@@ -1,7 +1,7 @@
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export const StyledSlideshow = ({ slides, onSlideChange }) => {
@@ -9,7 +9,9 @@ export const StyledSlideshow = ({ slides, onSlideChange }) => {
     <main className="flex flex-col items-center w-screen">
       <div className="w-full flex justify-center items-center bg-white">
         <Swiper
-          modules={[EffectCoverflow, Pagination]}
+          loop={true}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          modules={[EffectCoverflow, Pagination, Autoplay]}
           effect="coverflow"
           grabCursor
           centeredSlides

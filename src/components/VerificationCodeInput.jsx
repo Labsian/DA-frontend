@@ -1,8 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import Dialer from "./Dialer";
 
-const VerificationCodeInput = ({ length, loading, onComplete }) => {
-  const [code, setCode] = useState([...Array(length)].map(() => ""));
+const VerificationCodeInput = ({ length, loading, code, setCode, onComplete }) => {
+
   const inputs = useRef([]);
 
   const processInput = (e, slot) => {

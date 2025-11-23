@@ -4,7 +4,7 @@ import { CardIcon, LikeIcon, MessageIcon, PersonIcon } from "../components/UseIc
 export const BottomNav = () => {
   const btns = [
     { icon: <CardIcon />, path: "/swipe" },
-    { icon: <LikeIcon />, path: "/likes" },
+    { icon: <LikeIcon />, path: "/swipe/matches" },
     { icon: <MessageIcon />, path: "/messages" },
     { icon: <PersonIcon />, path: "/swipe" },
   ];

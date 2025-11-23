@@ -598,7 +598,7 @@ export const CalendarIcon = () => {
     </svg>
   );
 };
-export const DislikeIcon = () => {
+export const DislikeIcon = ({stroke}) => {
   return (
     <svg
       width="17"
@@ -611,8 +611,8 @@ export const DislikeIcon = () => {
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M1.36612 1.36612C1.85427 0.877961 2.64573 0.877961 3.13388 1.36612L8.5 6.73223L13.8661 1.36612C14.3543 0.877961 15.1457 0.877961 15.6339 1.36612C16.122 1.85427 16.122 2.64573 15.6339 3.13388L10.2678 8.5L15.6339 13.8661C16.122 14.3543 16.122 15.1457 15.6339 15.6339C15.1457 16.122 14.3543 16.122 13.8661 15.6339L8.5 10.2678L3.13388 15.6339C2.64573 16.122 1.85427 16.122 1.36612 15.6339C0.877961 15.1457 0.877961 14.3543 1.36612 13.8661L6.73223 8.5L1.36612 3.13388C0.877961 2.64573 0.877961 1.85427 1.36612 1.36612Z"
-        fill="#F27121"
-        stroke="#F27121"
+        fill={stroke?"currentColor":"#F27121"}
+        stroke={stroke?"currentColor":"#F27121"}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
