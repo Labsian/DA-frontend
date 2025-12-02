@@ -7,7 +7,7 @@ export const MatchCard = ({ profile }) => {
       //     backgroundImage: `url(${profile.url})`,
       //   }}
       className="relative  
-            rounded-2xl shadow-xl overflow-hidden "
+            rounded-2xl shadow-xl overflow-hidden w-full"
     >
       <img src={profile.url} alt="" />
       <h2 className="absolute text-white bottom-13 left-3.5 z-10 text-lg font-bold">

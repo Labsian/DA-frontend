@@ -31,9 +31,9 @@ export function Matches() {
           <p>This is a list of people who have liked you and your matches.</p>
         </div>
         <div className="flex w-full justify-center items-center gap-2.5">
-          <div className="flex-1 h-px bg-black opacity-40" />
+          <div className="flex-1 bg-black opacity-40" />
           <span>Today</span>
-          <div className="flex-1 h-px bg-black opacity-40" />
+          <div className="flex-1 bg-black opacity-40" />
         </div>
 
         <Scrollbar sx={{ height: "485px" }}>
@@ -48,7 +48,6 @@ export function Matches() {
               <Grid
                 item
                 xs={6}
-                sm={6}
                 md={3}
                 key={index}
                 justifyItems={"center"}
