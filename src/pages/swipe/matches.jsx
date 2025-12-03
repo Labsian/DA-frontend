@@ -19,7 +19,7 @@ export function Matches() {
   ]);
 
   return (
-    <main className="flex flex-col justify-between h-full max-w-screen overflow-hidden pb-2.5">
+    <main className="flex flex-col justify-between max-w-screen overflow-hidden pb-2.5" style={{height:"calc(100vh - 60px)"}}>
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
           <div className=" flex justify-between items-center">
@@ -36,22 +36,17 @@ export function Matches() {
           <div className="flex-1 bg-black opacity-40" />
         </div>
 
-        <Scrollbar sx={{ height: "485px" }}>
+        <Scrollbar sx={{ height: "calc(100vh - 136px)" }}>
           <Grid
-            className={"w-full "}
+            // className={"w-fit"}
             container
             spacing={2}
-            justifyItems={"center"}
+            justifyContent="center"
             alignItems={"center"}
+            justifySelf={"center"}
           >
             {profiles.map((profile, index) => (
-              <Grid
-                item
-                xs={6}
-                md={3}
-                key={index}
-                justifyItems={"center"}
-              >
+              <Grid item xs={6} key={index} justifyItems={"center"}>
                 <MatchCard profile={profile} />
               </Grid>
             ))}

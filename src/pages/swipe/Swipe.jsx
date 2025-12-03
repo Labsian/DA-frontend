@@ -10,6 +10,9 @@ import {
   StarIcon,
 } from "../../components/UseIcons";
 import { StyledBtn } from "./../../components/StyledBtn";
+import { MyDrawer } from "../../components/Drawer";
+import { Filters } from "../../components/Filters";
+import Box from "@mui/material/Box";
 
 export function SwipePage() {
   const controlsLeft = useAnimation();
@@ -47,6 +50,12 @@ export function SwipePage() {
     setProfiles((prev) => prev.filter((p) => p !== profile));
   };
 
+  const [open, setOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setOpen((prev) => !prev);
+  };
+
   return (
     <main className="flex flex-col justify-between h-full max-w-screen overflow-hidden pb-2.5">
       <div className="flex flex-col h-[420px] gap-6">
@@ -55,7 +64,7 @@ export function SwipePage() {
             <ArrowLeftIcon />
           </StyledBtn>
           <h2>Discover</h2>
-          <StyledBtn secondary={true}>
+          <StyledBtn secondary={true} onClick={toggleDrawer}>
             <SettingIcon />
           </StyledBtn>
         </div>
@@ -99,6 +108,10 @@ export function SwipePage() {
         >
           <LikeIcon size="42" />
         </StyledBtn>
+
+        <MyDrawer open={open} onClose={toggleDrawer}>
+          <Filters/>
+        </MyDrawer>
 
         <button className="rounded-full shadow-[0px_30px_50px_rgba(0,0,0,0.3)] p-4">
           <StarIcon />
