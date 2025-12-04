@@ -6,7 +6,7 @@ export const StyledInput = ({ label, placeholder, id, type="text", name, value, 
       <input
        name={name}
        
-      onChange={formik.handleChange}
+      onChange={formik?.handleChange}
 
         type={type}
         id={id}
