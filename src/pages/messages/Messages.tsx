@@ -1,19 +1,18 @@
+import { useState } from "react";
+import { MyDrawer } from "../../components/Drawer";
+import { MessageBox } from "../../components/MessageBox";
 import { StyledBtn } from "../../components/StyledBtn";
 import { StyledInput } from "../../components/StyledInput";
 import { SearchIcon, SettingIcon } from "../../components/UseIcons";
 import { Activities } from "./Activities";
 import { MessagesList } from "./MessagesList";
-import { MyDrawer } from "../../components/Drawer";
-import { useState } from "react";
-import { MessageBox } from "../../components/MessageBox";
-
 
 export const Messages = () => {
-   const [open, setOpen] = useState(true);
-  
-    const toggleDrawer = () => {
-      setOpen((prev) => !prev);
-    };
+  const [open, setOpen] = useState(true);
+
+  const toggleDrawer = () => {
+    setOpen((prev) => !prev);
+  };
 
   return (
     <main className="flex flex-col gap-5">
@@ -39,9 +38,9 @@ export const Messages = () => {
         <h3>Messages</h3>
         <MessagesList />
       </div>{" "}
-              <MyDrawer open={open} onClose={toggleDrawer}>
-<MessageBox/>
-        </MyDrawer>
+      <MyDrawer open={open} onClose={toggleDrawer}>
+        <MessageBox />
+      </MyDrawer>
     </main>
   );
 };
