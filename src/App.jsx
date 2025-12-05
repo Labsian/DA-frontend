@@ -14,6 +14,7 @@ import { ProfileDetailsPage } from "./pages/sign-up/ProfileDetailsPage";
 import { Match } from "./pages/swipe/match";
 import { Matches } from "./pages/swipe/matches";
 import { Messages } from "./pages/messages/Messages";
+import MessagesLayout from "./layouts/MessagesLayout";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -51,7 +52,11 @@ const App = () => {
     },
     {
       path: "/messages",
-      element: <Messages />,
+      element: <MessagesLayout/>,
+            children: [
+        { index: true, element: <Messages /> },
+
+      ],
     },
   ]);
   return <RouterProvider router={router} />;

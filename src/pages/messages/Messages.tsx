@@ -3,8 +3,18 @@ import { StyledInput } from "../../components/StyledInput";
 import { SearchIcon, SettingIcon } from "../../components/UseIcons";
 import { Activities } from "./Activities";
 import { MessagesList } from "./MessagesList";
+import { MyDrawer } from "../../components/Drawer";
+import { useState } from "react";
+import { MessageBox } from "../../components/MessageBox";
+
 
 export const Messages = () => {
+   const [open, setOpen] = useState(true);
+  
+    const toggleDrawer = () => {
+      setOpen((prev) => !prev);
+    };
+
   return (
     <main className="flex flex-col gap-5">
       <div className=" flex justify-between items-center">
@@ -29,6 +39,9 @@ export const Messages = () => {
         <h3>Messages</h3>
         <MessagesList />
       </div>{" "}
+              <MyDrawer open={open} onClose={toggleDrawer}>
+<MessageBox/>
+        </MyDrawer>
     </main>
   );
 };
