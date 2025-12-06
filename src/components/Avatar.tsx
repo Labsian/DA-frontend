@@ -4,7 +4,7 @@ export const Avatar = ({
   story
 }: {
   size?: string;
-  path: string;
+  path?: string;
   story?: boolean;
 }) => {
   return (

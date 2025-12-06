@@ -2,7 +2,7 @@ import { Avatar } from "../../components/Avatar";
 
 export interface Chat {
   name: string;
-  lastMessage: string;
+  preview: string;
   story: boolean;
   url: string;
 }
@@ -23,7 +23,7 @@ export const MsgPreview = ({
       <div className="flex  justify-between  w-full border-b border-b-[#E8E6EA]">
         <div className="flex flex-col justify-between pb-2">
           <p className="font-bold">{chat.name}</p>
-          <p className="font-normal">{chat.lastMessage}</p>
+          <p className="font-normal">{chat.preview}</p>
         </div>
         <div className="flex flex-col gap-1 items-end">
           <p className="text-[12px] text-[#ADAFBB] opacity-20 font-bold">

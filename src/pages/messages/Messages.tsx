@@ -1,24 +1,27 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MyDrawer } from "../../components/Drawer";
 import { MessageBox } from "../../components/MessageBox";
 import { StyledBtn } from "../../components/StyledBtn";
 import { StyledInput } from "../../components/StyledInput";
 import { SearchIcon, SettingIcon } from "../../components/UseIcons";
+import { Chat } from "../../store/chatStore";
 import { Activities } from "./Activities";
 import { MessagesList } from "./MessagesList";
 
 export const Messages = () => {
   const [open, setOpen] = useState(false);
-  const [selectedChat, setSelectedChat] = useState(null);
+  const [selectedChat, setSelectedChat] = useState<Chat | null>(null);
+
 
   const toggleDrawer = () => {
     setOpen((prev) => !prev);
   };
 
-  const handleSelectChat = (chat) => {
-  setSelectedChat(chat);
-  setOpen(true);
-};
+  const handleSelectChat = (chat: Chat) => {
+    setSelectedChat(chat);
+    setOpen(true);
+  };
+
 
 
   return (
@@ -43,10 +46,11 @@ export const Messages = () => {
       </div>{" "}
       <div>
         <h3>Messages</h3>
-        <MessagesList onSelectChat={handleSelectChat}/>
+        <MessagesList onSelectChat={handleSelectChat} />
       </div>{" "}
       <MyDrawer open={open} onClose={toggleDrawer}>
-        <MessageBox selectedChat={selectedChat}/>
+        <MessageBox selectedChat={selectedChat} />
+ 
       </MyDrawer>
     </main>
   );

@@ -1,16 +1,30 @@
-import React from "react";
+export const StyledInput = ({
+  label,
+  placeholder,
+  id,
+  type = "text",
+  name,
+  formik,
+  ...props
+}) => {
+  const value = formik?.values?.[name] ?? ""; 
+  const handleChange = formik?.handleChange ?? (() => {});
 
-export const StyledInput = ({ label, placeholder, id, type="text", name, value, formik, ...props }) => {
   return (
     <div className="relative">
       <input
-       name={name}
-       
-      onChange={formik?.handleChange}
-
+        value={value}
+        name={name}
+        onChange={handleChange}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            formik?.handleSubmit?.();
+          }
+        }}
         type={type}
         id={id}
-        className="peer h-10 p-2 w-full border border-[#E8E6EA] rounded-2xl text-gray-900 placeholder-transparent focus:outline-none focus:border-[#E94057]"
+        className="peer h-10 p-2 w-full border border-[#E8E6EA] rounded-2xl text-[14px] text-gray-900 placeholder-transparent focus:outline-none focus:border-[#E94057]"
         placeholder={placeholder}
         {...props}
       />
