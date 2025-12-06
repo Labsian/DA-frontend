@@ -8,11 +8,18 @@ import { Activities } from "./Activities";
 import { MessagesList } from "./MessagesList";
 
 export const Messages = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
+  const [selectedChat, setSelectedChat] = useState(null);
 
   const toggleDrawer = () => {
     setOpen((prev) => !prev);
   };
+
+  const handleSelectChat = (chat) => {
+  setSelectedChat(chat);
+  setOpen(true);
+};
+
 
   return (
     <main className="flex flex-col gap-5">
@@ -36,10 +43,10 @@ export const Messages = () => {
       </div>{" "}
       <div>
         <h3>Messages</h3>
-        <MessagesList />
+        <MessagesList onSelectChat={handleSelectChat}/>
       </div>{" "}
       <MyDrawer open={open} onClose={toggleDrawer}>
-        <MessageBox />
+        <MessageBox selectedChat={selectedChat}/>
       </MyDrawer>
     </main>
   );
