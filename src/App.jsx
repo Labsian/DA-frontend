@@ -15,6 +15,7 @@ import { Match } from "./pages/swipe/match";
 import { Matches } from "./pages/swipe/matches";
 import { Messages } from "./pages/messages/Messages";
 import MessagesLayout from "./layouts/MessagesLayout";
+import { Profile } from "./pages/profile/profile";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -49,6 +50,10 @@ const App = () => {
     {
       path: "/match",
       element: <Match />,
+    },
+    {
+      path: "/profile",
+      element: <Profile />,
     },
     {
       path: "/messages",
