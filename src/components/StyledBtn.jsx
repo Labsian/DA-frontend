@@ -8,12 +8,14 @@ export const StyledBtn = ({
   mixed,
   iconRed,
   bgPink,
-  type
+  type,
+  commonInterest
+
 }) => {
   return (
     <button
     type={type}
-      onClick={onClick}
+      onClick={onClick||undefined}
       className={`${
         primary && "bg-[#E94057] hover:bg-[#ee7081]  text-white font-bold"
       } ${
@@ -29,8 +31,9 @@ export const StyledBtn = ({
           "bg-[#e7bac080] text-[#ee7081] hover:bg-[#ee7081] hover:text-white font-bold"
         } 
       ${iconRed && "[&>svg]:text-[#E94057] hover:[&>svg]:text-white"}
+      ${commonInterest &&"bg-white text-[#ee7081] hover:bg-[#ee7081] hover:text-white font-bold border border-[#ee7081]"}
 
-      p-2   rounded-2xl transition duration-300 ${styles}`}
+      p-2 min-w-fit w-11 flex items-center justify-center rounded-2xl transition duration-300 ${styles}`}
     >
       {children}
     </button>

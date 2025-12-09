@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export const StyledLink = ({ children, onClick }) => {
+export const StyledLink = ({ children, onClick, to }) => {
   return (
-    <a onClick={onClick} className="text-[#E94057] cursor-pointer font-bold">
+    <Link to={to} onClick={onClick} className="text-[#E94057] cursor-pointer font-bold">
       {children}
-    </a>
+    </Link>
   );
 };

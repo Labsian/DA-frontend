@@ -60,9 +60,26 @@ export const Interests = () => {
 
       <div className="grid grid-cols-2 gap-2 w-full">
         {interests.map((interest, index) => (
-
+          <StyledBtn
+            onClick={() =>
+              setChosenInterests((prev) =>
+                prev.includes(interest.name)
+                  ? prev.filter((item) => item !== interest.name)
+                  : [...prev, interest.name]
+              )
+            }
+            primary={chosenInterests.includes(interest.name)}
+            mixed={!chosenInterests.includes(interest.name)}
+            iconRed={!chosenInterests.includes(interest.name)}
+            key={index}
+            styles={"flex gap-2 items-center w-full text-black"}
+          >
+            {interest.icon}
+            {interest.name}
+          </StyledBtn>
         ))}
       </div>
+
 
       <StyledBtn
         onClick={() => navigate("/sign-up/friends")}

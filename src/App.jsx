@@ -1,21 +1,22 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MessagesLayout from "./layouts/MessagesLayout";
 import { SignUp } from "./layouts/SignUp";
+import { Swipe } from "./layouts/Swipe";
 import { Intro } from "./pages/Intro";
-import PhoneAuth from "./pages/sign-up/PhoneAuth";
-import { VerificationCodePage } from "./pages/sign-up/VerificationCodePage";
-import { SignUpPage } from "./pages/sign-up/index";
-import { Gender } from './pages/sign-up/gender';
-import { Interests } from "./pages/sign-up/interests";
+import { Messages } from "./pages/messages/Messages";
+import { Gallary } from "./pages/profile/gallary";
+import { Profile } from "./pages/profile/profile";
 import { Friends } from "./pages/sign-up/Friends";
+import PhoneAuth from "./pages/sign-up/PhoneAuth";
+import { ProfileDetailsPage } from "./pages/sign-up/ProfileDetailsPage";
+import { VerificationCodePage } from "./pages/sign-up/VerificationCodePage";
+import { Gender } from "./pages/sign-up/gender";
+import { SignUpPage } from "./pages/sign-up/index";
+import { Interests } from "./pages/sign-up/interests";
 import { Notifications } from "./pages/sign-up/notifications";
 import { SwipePage } from "./pages/swipe/Swipe";
-import { Swipe } from "./layouts/Swipe";
-import { ProfileDetailsPage } from "./pages/sign-up/ProfileDetailsPage";
 import { Match } from "./pages/swipe/match";
 import { Matches } from "./pages/swipe/matches";
-import { Messages } from "./pages/messages/Messages";
-import MessagesLayout from "./layouts/MessagesLayout";
-import { Profile } from "./pages/profile/profile";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -44,7 +45,6 @@ const App = () => {
       children: [
         { index: true, element: <SwipePage /> },
         { path: "matches", element: <Matches /> },
-
       ],
     },
     {
@@ -55,13 +55,11 @@ const App = () => {
       path: "/profile",
       element: <Profile />,
     },
+    { path: "profile/gallary", element: <Gallary /> },
     {
       path: "/messages",
-      element: <MessagesLayout/>,
-            children: [
-        { index: true, element: <Messages /> },
-
-      ],
+      element: <MessagesLayout />,
+      children: [{ index: true, element: <Messages /> }],
     },
   ]);
   return <RouterProvider router={router} />;

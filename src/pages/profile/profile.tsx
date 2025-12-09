@@ -1,22 +1,23 @@
-import React from "react";
+import { StyledBtn } from "../../components/StyledBtn";
+import { StyledLink } from "../../components/StyledLink";
 import {
+  ArrowIcon,
   DislikeIcon,
   LikeIcon,
   LocationIcon,
+  ReadIcon,
   SendIcon,
-  SettingIcon,
   StarIcon,
 } from "../../components/UseIcons";
-import { StyledBtn } from "../../components/StyledBtn";
-import { MyDrawer } from "../../components/Drawer";
-import { Filters } from "../../components/Filters";
-import { StyledLink } from "../../components/StyledLink";
 
 export const Profile = () => {
   return (
     <main className="flex flex-col gap-10">
       <div className="relative">
         <img className="w-full" src="/assets/girl4.svg" alt="" />
+        <button
+          className="rounded-2xl border border-white text-white bg-white/20 hover:bg-white/40 absolute top-10 left-10 p-2 rotate-180"
+        ><ArrowIcon/></button>
         <div className="bg-white w-full rounded-t-[60px] absolute  bottom-0 h-15">
           <div className="flex justify-around items-center absolute w-full bottom-8 z-20">
             <button className="bg-white rounded-full shadow-[0px_30px_50px_rgba(0,0,0,0.3)] p-4">
@@ -75,25 +76,29 @@ export const Profile = () => {
           <h3>Interests</h3>
 
           <div className="flex gap-1.5">
-            <StyledBtn
-              // primary={chosenInterests.includes(interest.name)}
-              // mixed={!chosenInterests.includes(interest.name)}
-              // iconRed={!chosenInterests.includes(interest.name)}
-              secondary={true}
-              // key={index}
-              styles={"border-primary"}
-            >
-              books
-              {/* {interest.icon}
-            {interest.name} */}
+            <StyledBtn mixed>fffff</StyledBtn>
+            <StyledBtn commonInterest>
+              <div className="flex items-center gap-1">
+                <ReadIcon />
+                fffff
+              </div>
             </StyledBtn>
           </div>
         </div>
       </div>
-      <div className="px-10 flex justify-between">
+      <div className="px-10 gap-1 flex flex-col">
         <div className="flex justify-between w-full items-center">
-          <h3>Interests</h3>
-          <StyledLink>See More</StyledLink>
+          <h3>Gallary</h3>
+          <StyledLink to={"gallary"}>See More</StyledLink>
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <img src="/assets/photo (6).svg" className="rounded-xl w-full" />
+          <img src="/assets/photo (2).svg" className="rounded-xl w-full" />
+        </div>
+        <div className="grid grid-cols-3 gap-3">
+          <img src="/assets/photo (3).svg" className="rounded-xl w-full" />
+          <img src="/assets/photo (4).svg" className="rounded-xl w-full" />
+          <img src="/assets/photo (5).svg" className="rounded-xl w-full" />
         </div>
         <div>
           <div className="flex space-between"></div>
